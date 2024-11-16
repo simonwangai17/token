@@ -1,11 +1,11 @@
 // Sample Token Data
 const tokens = [
-  { name: "Token A", payout: 10, duration: "Now", interval: 0, grabbed: false, countdown: 0 },
-  { name: "Token B", payout: 15, duration: "4 hrs", interval: 4 * 3600, grabbed: false, countdown: 4 * 3600 },
-  { name: "Token C", payout: 20, duration: "4 hrs", interval: 4 * 3600, grabbed: false, countdown: 4 * 3600 },
-  { name: "Token D", payout: 25, duration: "4 hrs", interval: 4 * 3600, grabbed: false, countdown: 4 * 3600 },
-  { name: "Token E", payout: 50, duration: "12 hrs", interval: 12 * 3600, grabbed: false, countdown: 12 * 3600 },
-  { name: "Token F", payout: 30, duration: "4 hrs", interval: 4 * 3600, grabbed: false, countdown: 4 * 3600 }
+  { name: "Jamii Agencies", payout: 10, duration: "Now", interval: 0, grabbed: false, countdown: 0 },
+  { name: "Capital Investor", payout: 25, duration: "4 hrs", interval: 4 * 3600, grabbed: false, countdown: 4 * 3600 },
+  { name: "Surveys", payout: 20, duration: "6 hrs", interval: 6 * 3600, grabbed: false, countdown: 6 * 3600 },
+  { name: "Safaricom", payout: 20, duration: "8 hrs", interval: 8 * 3600, grabbed: false, countdown: 8 * 3600 },
+  { name: "Faiba", payout: 50, duration: "12 hrs", interval: 12 * 3600, grabbed: false, countdown: 12 * 3600 },
+  { name: "Refferal Payout", payout: 80, duration: "15 hrs", interval: 15 * 3600, grabbed: false, countdown: 15 * 3600 }
 ];
 
 // Initialize tokens on page load
