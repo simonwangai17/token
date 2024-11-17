@@ -7,9 +7,25 @@ const tokens = [
   { name: "Faiba", payout: 50, duration: "12 hrs", interval: 12 * 3600, grabbed: false, countdown: 12 * 3600 },
   { name: "Refferal Payout", payout: 80, duration: "15 hrs", interval: 15 * 3600, grabbed: false, countdown: 15 * 3600 }
 ];
-
+// save tokens to localstorage
+function saveTokens() {
+  localStorage.setItem('tokens', JSON.stringify(tokens));
+}
+//load tokens from localstorage
+function loadTokens () {
+  const savedTokens = localStorage.getItem('tokens');
+  if (savedTokens) {
+    const parsedTokens = JSON.parse(savedTokens);
+    parsedTokens.forEach((token, index)  => {
+      tokens[index].grabbed = token.grabbed;
+      tokens[index],countdown = token.countdown;
+    })
+  }
+}
 // Initialize tokens on page load
 function initializeTokens() {
+  loadTokens(); //load saved state
+
   const table = document.getElementById('tokensTable');
   table.innerHTML = '';
   tokens.forEach((token, index) => {
@@ -29,6 +45,7 @@ function initializeTokens() {
       </td>`;
     table.appendChild(row);
   });
+  saveTokens(); //save the updated state
 }
 
 // Format time for countdown display
